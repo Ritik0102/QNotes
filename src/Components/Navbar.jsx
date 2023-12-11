@@ -55,7 +55,8 @@ function Navbar() {
         </div>
         {!localStorage.getItem('token') ? <div className="d-grid gap-2 d-md-flex justify-content-md-end">
           <Link
-            className="btn btn-primary mx-1"
+            className= "btn btn-primary mx-1"
+            style={{display : `${location.pathname == "/login" ? "none" : ""}`}}
             role="button"
             aria-disabled="true"
             to= "/login"
@@ -64,6 +65,7 @@ function Navbar() {
           </Link>
           <Link
             className="btn btn-primary mx-1"
+            style={{display : `${location.pathname == "/signup" ? "none" : ""}`}}
             role="button"
             aria-disabled="true"
             to= '/signup'
